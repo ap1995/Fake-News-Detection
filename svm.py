@@ -25,25 +25,6 @@ def run(train_file, valid_file, test_file, output_file):
     clf = LinearSVC(random_state=0)
     clf.fit(X_train_tfidf, y)
 
-    #### VALIDATION DATA ###
-
-    # with open(valid_file, 'rt') as f:
-    #     reader = csv.reader(f, delimiter = '\t')
-    #     valid_data = list(reader)
-    #
-    # valid =[]
-    # valid_y = []
-    # for i in valid_data:
-    #     valid_y.append(i[0])
-    # for i in valid_data:
-    #     valid += [' '.join(i)]
-    #
-    # valid_X = vectorizer.fit_transform(valid)
-    # X_valid_tfidf = tfidf_transformer.fit_transform(valid_X)
-    #
-    # print(X_valid_tfidf.shape)
-    # print(clf.score(X_valid_tfidf, valid_y))
-
     #### TEST DATA ###
 
     with open(test_file, 'rt') as f:
